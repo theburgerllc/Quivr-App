@@ -1,0 +1,22 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jsx-a11y/recommended", "next/core-web-vitals"],
+  "plugins": ["react", "react-hooks", "jsx-a11y"],
+  "settings": { "react": { "version": "detect" } },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "React": "readonly",
+    "JSX": "readonly"
+  },
+  "rules": { 
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": ["warn", { "allow": ["warn", "error", "log"] }],
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}

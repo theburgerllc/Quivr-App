@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint app components lib",
-    "postinstall": "prisma generate || echo 'skip prisma'"
+    "postinstall": "prisma generate || echo 'skip prisma'",
+    "vercel-install": "npm install --legacy-peer-deps"
   },
   "engines": {
     "node": ">=20.11.0"

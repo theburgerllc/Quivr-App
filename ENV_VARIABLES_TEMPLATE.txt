@@ -1,0 +1,74 @@
+# COPY THESE TO VERCEL ENVIRONMENT VARIABLES
+# Go to: https://vercel.com/tburgernycs-projects/quivr-app/settings/environment-variables
+# Add each variable one by one
+
+# ==================================
+# SUPABASE (REQUIRED - App won't work without these)
+# ==================================
+# Get these from: https://supabase.com/dashboard/project/YOUR_PROJECT/settings/api
+
+SUPABASE_URL=https://YOUR_PROJECT_ID.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...YOUR_ANON_KEY
+SUPABASE_SERVICE_ROLE=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...YOUR_SERVICE_ROLE_KEY
+
+# ==================================
+# STRIPE (REQUIRED for payments)
+# ==================================
+# Get these from: https://dashboard.stripe.com/apikeys
+
+STRIPE_SECRET_KEY=sk_test_YOUR_TEST_KEY_HERE
+# For production use: sk_live_YOUR_LIVE_KEY_HERE
+
+# After setting up webhook endpoint in Stripe Dashboard
+STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
+
+# Create these products in Stripe Dashboard or use test price IDs
+STRIPE_PRICE_PREMIUM=price_YOUR_PREMIUM_PRICE_ID
+STRIPE_PRICE_BOOST=price_YOUR_BOOST_PRICE_ID
+STRIPE_PRICE_SPOTLIGHT=price_YOUR_SPOTLIGHT_PRICE_ID
+
+# ==================================
+# PUBLIC CONFIGURATION (OPTIONAL)
+# ==================================
+NEXT_PUBLIC_PREMIUM_NAME=Premium
+NEXT_PUBLIC_POSTHOG_KEY=phc_YOUR_POSTHOG_KEY_IF_YOU_HAVE_ONE
+
+# ==================================
+# SECURITY (OPTIONAL but recommended for production)
+# ==================================
+COOKIE_SECURE=true
+COOKIE_SAMESITE=lax
+
+# ==================================
+# NODE VERSION (Already set in vercel.json)
+# ==================================
+NODE_VERSION=20
+
+# ==================================
+# HOW TO ADD IN VERCEL:
+# ==================================
+# 1. Go to the environment variables page (link above)
+# 2. Click "Add New"
+# 3. Enter the Key (e.g., SUPABASE_URL)
+# 4. Enter the Value (e.g., https://your-project.supabase.co)
+# 5. Select environments (Production, Preview, Development)
+# 6. Click "Save"
+# 7. Repeat for each variable
+# 8. After adding all, redeploy your app
+
+# ==================================
+# MINIMUM REQUIRED TO GET APP RUNNING:
+# ==================================
+# 1. SUPABASE_URL
+# 2. SUPABASE_ANON_KEY
+# 3. SUPABASE_SERVICE_ROLE
+
+# ==================================
+# TEST VALUES FOR QUICK START (NOT FOR PRODUCTION):
+# ==================================
+# If you want to quickly test, you can use these placeholder values:
+# (The app will load but won't have real functionality)
+
+# SUPABASE_URL=https://placeholder.supabase.co
+# SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.placeholder
+# SUPABASE_SERVICE_ROLE=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.placeholder
